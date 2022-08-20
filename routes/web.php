@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,20 +18,30 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('{any}', function () {
-    return view('index'); // or wherever your React app is bootstrapped.
-})->where('any', '.*');
+Route::middleware('auth')->group( function () {
+    Route::get('/', function () {
+        return view('index');
+    });
+    // Route::get('{any}', function () {
+    //     return view('index'); // or wherever your React app is bootstrapped.
+    // })->where('any', '.*');
+    
+    // Route::get('/{path?}', function () {
+    //     return view('index');
+    // });
+    // Route::get('/{locale}/{path?}', function () {
+    //     return view('index');
+    // });
+    // Route::get('{locale}/{path?}/{params?}', function () {
+    //     return view('index');
+    // });
 
-Route::get('/{path?}', function () {
-    return view('index');
-});
-Route::get('/{locale}/{path?}', function () {
-    return view('index');
-});
-Route::get('{locale}/{path?}/{params?}', function () {
-    return view('index');
-});
+    
+    });
+    Auth::routes();
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home', function () {
+        return view('index');
+    });
+    
+    // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');    
