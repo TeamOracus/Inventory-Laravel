@@ -13,8 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('{any}', function () {
+    return view('index'); // or wherever your React app is bootstrapped.
+})->where('any', '.*');
+
+Route::get('/{path?}', function () {
+    return view('index');
+});
+Route::get('/{locale}/{path?}', function () {
+    return view('index');
+});
+Route::get('{locale}/{path?}/{params?}', function () {
+    return view('index');
 });
 
 Auth::routes();
