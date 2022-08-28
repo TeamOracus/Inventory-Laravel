@@ -1,0 +1,130 @@
+.signup {
+  padding: 0;
+  background: #fff;
+  overflow: hidden;
+  height: 100vh;
+}
+.signup .pics {
+  position: relative;
+  background: rgba(185, 192, 254, 0.4) url("./imgs/signin.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+.signup .pics div {
+  height: 100vh;
+  padding: 30px 0 0 80px;
+}
+.signup .pics div img {
+  width: 12vw;
+}
+.signup .pics div h2 {
+  text-transform: capitalize;
+  font-size: 2.5rem;
+}
+.signup .pics > img {
+  width: 100%;
+  height: auto;
+  bottom: 0%;
+  display: none;
+}
+.signup .form {
+  background: #fff url("./imgs/dotted.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  height: 100vh;
+  overflow-y: auto;
+}
+.signup .form img {
+  display: none !important;
+}
+.signup .form > div {
+  margin: 190px 50px 30px 50px;
+}
+.signup .form > div h3 {
+  font-size: 2rem;
+}
+.signup .form > div form > div label {
+  font-weight: 500;
+  margin-bottom: 0px;
+  margin-left: 10px;
+}
+.signup .form > div form > div input {
+  padding: 16px 30px;
+  border-radius: 10px;
+  border: 2px solid #B9C0FE;
+}
+.signup .form > div form > div input::-moz-placeholder {
+  color: #989898;
+  font-weight: 300;
+}
+.signup .form > div form > div input:-ms-input-placeholder {
+  color: #989898;
+  font-weight: 300;
+}
+.signup .form > div form > div input::placeholder {
+  color: #989898;
+  font-weight: 300;
+}
+.signup .form > div form .btns {
+  text-align: center;
+}
+.signup .form > div form .btns button {
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+.signup .form > div form .btns button:first-child {
+  background: #5541D7 !important;
+}
+.signup .form > div form .btns button:first-child:hover {
+  background: #fff !important;
+  color: #0A0D51;
+}
+.signup .form > div form .btns button:last-child {
+  color: #0A0D51;
+  background: #fff !important;
+}
+.signup .form > div form .btns button:last-child:hover {
+  background: #5541D7 !important;
+  color: #fff;
+}
+.signup .form > div form p {
+  text-align: center;
+}
+.signup .form > div form p a {
+  color: #0A0D51;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 767px) {
+  .signup {
+    overflow-y: auto !important;
+  }
+  .signup .row {
+    flex-direction: column-reverse;
+  }
+  .signup .row .pics {
+    height: 2px;
+    background: none;
+  }
+  .signup .row .pics > div {
+    height: 2px;
+  }
+  .signup .row .pics > div * {
+    display: none;
+  }
+  .signup .row .pics > img {
+    display: block;
+  }
+  .signup .row .form {
+    position: relative;
+  }
+  .signup .row .form img {
+    position: absolute;
+    padding-left: 50px;
+    display: block !important;
+    top: 100px;
+    width: 50vw;
+  }
+}/*# sourceMappingURL=signup.css.map */
