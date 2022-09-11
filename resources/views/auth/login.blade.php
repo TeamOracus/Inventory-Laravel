@@ -8,7 +8,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/main.css" />
-    <link rel="stylesheet" href="./assets/signup.css" />
+    <link rel="stylesheet" href="./assets/signin.css" />
 </head>
 
 <body>
@@ -25,28 +25,29 @@
                 <img src="./assets/imgs/logo/mobilelogo.png" class="mobilelogo" alt="" />
                 <div>
                     <h3>Sign in</h3>
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate>
                         @csrf
                         <div class="mb-3">
                             <label for="inputEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="inputEmail"
-                                placeholder="input your email in here" />
-
+                            <input type="email" class="form-control @error('email') is-invalid @enderror" id="inputEmail"
+                                placeholder="input your email in here"  name="email" value="{{ old('email') }}" required autocomplete="email" autofocus />
                             @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
                             @enderror
+
                         </div>
                         <div class="mb-2">
-                            <label for="inputPassword" class="form-label">Email</label>
-                            <input type="password" class="form-control" id="inputPassword"
-                                placeholder="input your password in here" />
+                            <label for="inputPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control @error('password') is-invalid @enderror" id="inputPassword"
+                                placeholder="input your password in here"  name="password" required autocomplete="current-password" />
                             @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
                             @enderror
+
                         </div>
                         <div>
                             @if (Route::has('password.request'))
@@ -64,7 +65,7 @@
                             </button>
                         </div>
                         <p class="mt-2">
-                            Doesn't have an account? <a href="#">Sign up</a>
+                            Doesn't have an account? <a href="{{ route('register') }}">Sign up</a>
                         </p>
                     </form>
                 </div>
@@ -72,6 +73,7 @@
         </div>
     </div>
     <script src="./assets/bootstrap/bootstrap.min.js"></script>
+    <script src="./assets/main.js"></script>
 </body>
 
 </html>

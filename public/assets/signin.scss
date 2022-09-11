@@ -6,7 +6,7 @@
     // position: sticky;
     .pics {
         position: relative;
-        background: #B9C0FE66 url('./imgs/signup.png');
+        background: #B9C0FE66 url('./imgs/signin.png');
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: bottom left;
@@ -35,25 +35,21 @@
         overflow-y: auto;
         img{display: none !important;}
         > div{
-            margin: 50px 50px 30px 50px;
+            margin: 190px 50px 30px 50px;
             h3{
                 font-size: 2rem;
             }
             form {
-                background: url('./imgs/logodown.png');
-                background-repeat: no-repeat;
-                background-position: bottom left;
                 > div {
                     label {
                         font-weight: 500;
                         margin-bottom: 0px;
                         margin-left: 10px;
                     }
-                    input:not([type="checkbox"]) {
+                    input {
                         padding: 16px 30px;
                         border-radius: 10px;
                         border: 2px solid #B9C0FE;
-
 
                         &::placeholder {
                             color: #989898;
@@ -64,7 +60,6 @@
 
                 .btns {
                     text-align: center;
-                    margin: 0 50px;
                     button  {
                         padding: 10px;
                         border-radius: 10px;
@@ -73,11 +68,11 @@
                             background: #5541D7 !important;
                             &:hover {
                                 background: #fff !important;
-                                color: #0A0D51;
+                                color: #5541D7;
                             }
                         }
                         &:last-child{
-                            color: #0A0D51;
+                            color: #5541D7;
                             background: #fff !important;
                             &:hover {
                                 background: #5541D7 !important;
@@ -103,24 +98,26 @@
 
         overflow-y: auto !important;
         .row {
-            
+            flex-direction: column-reverse;
             .pics {
-                display: none;
+                height: 2px;
+                background: none;
+                > div {
+                    * {display: none;}
+                    height: 2px;
+                }
+                > img {
+                    display: block;
+                }
             }
             .form {
-                padding-top: 150px;
                 position: relative;
-                > img {
+                img {
                     position: absolute;
                     padding-left: 50px;
                     display: inline-block !important;
-                    top: 120px;
-                    width: 45vw;
-
-                }
-                form {
-                background-position: bottom center;
-
+                    top: 100px;
+                    width: 50vw;
                 }
                 
             }

@@ -1,0 +1,148 @@
+.forgot {
+  padding: 0;
+  background: #fff;
+  overflow: hidden;
+  height: 100vh;
+  background: rgba(185, 192, 254, 0.168627451);
+}
+.forgot .form {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 80px;
+  height: 100vh;
+}
+.forgot .form .forgotimg,
+.forgot .form .logoDown {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  display: none;
+  z-index: -1;
+}
+.forgot .form .forgotimg.logoDown,
+.forgot .form .logoDown.logoDown {
+  width: 92px;
+  left: 35px;
+}
+.forgot .form .bckLogo {
+  margin-bottom: 30px;
+}
+.forgot .form .bckLogo i {
+  padding: 10px 20px;
+  background: white;
+  border-radius: 5px;
+  color: #a6afff;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.forgot .form .bckLogo i:hover {
+  background: rgba(185, 192, 254, 0.6039215686);
+  color: #4e5de5;
+}
+.forgot .form > div,
+.forgot .form form {
+  margin-bottom: 20px;
+}
+.forgot .form > div h3,
+.forgot .form form h3 {
+  text-transform: capitalize;
+  font-size: 2.3rem;
+  color: #070a5e;
+}
+.forgot .form > div p,
+.forgot .form form p {
+  font-size: 0.9rem;
+}
+.forgot .form > div input,
+.forgot .form form input {
+  max-width: 325px;
+  width: 100%;
+}
+.forgot .form > div > div label,
+.forgot .form form > div label {
+  font-weight: 500;
+  margin-bottom: 0px;
+  margin-left: 10px;
+}
+.forgot .form > div > div input,
+.forgot .form form > div input {
+  padding: 16px 30px;
+  border-radius: 10px;
+  border: 2px solid #b9c0fe;
+}
+.forgot .form > div > div input::-moz-placeholder, .forgot .form form > div input::-moz-placeholder {
+  color: #989898;
+  font-weight: 300;
+}
+.forgot .form > div > div input:-ms-input-placeholder, .forgot .form form > div input:-ms-input-placeholder {
+  color: #989898;
+  font-weight: 300;
+}
+.forgot .form > div > div input::placeholder,
+.forgot .form form > div input::placeholder {
+  color: #989898;
+  font-weight: 300;
+}
+.forgot .form > div button,
+.forgot .form form button {
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  background: #5541d7 !important;
+  color: #fff;
+}
+.forgot .form > div button:hover,
+.forgot .form form button:hover {
+  background: #fff !important;
+  color: #5541d7;
+  border: 2px solid #5541d7;
+}
+.forgot .pics {
+  background: #fff url("./imgs/dotted.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  height: 100vh;
+  position: relative;
+}
+.forgot .pics img {
+  position: absolute;
+  left: -30%;
+  bottom: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .forgot {
+    overflow-y: auto !important;
+  }
+  .forgot .row {
+    flex-direction: column;
+  }
+  .forgot .row .pics {
+    display: none;
+  }
+  .forgot .row .form {
+    padding: 0px;
+    background: rgba(185, 192, 254, 0.168627451) url("./imgs/dotted.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    height: 100vh;
+    position: relative;
+  }
+  .forgot .row .form .forgotContent {
+    padding: 25px;
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+  .forgot .row .form form {
+    padding: 25px;
+  }
+  .forgot .row .form .forgotimg,
+.forgot .row .form .logoDown {
+    display: block !important;
+  }
+}/*# sourceMappingURL=forgotpsd.css.map */
